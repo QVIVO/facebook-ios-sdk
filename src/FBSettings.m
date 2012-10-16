@@ -78,7 +78,6 @@ static dispatch_once_t g_publishInstallOnceToken;
 #pragma mark -
 #pragma mark proto-activity publishing code
 
-#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 + (void)publishInstall:(NSString *)appID {
     @try {
@@ -91,6 +90,7 @@ static dispatch_once_t g_publishInstallOnceToken;
             return;
         }
 
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
         // look for a previous ping & grab the facebook app's current attribution id.
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *pingKey = [NSString stringWithFormat:FBLastAttributionPing, appID, nil];
@@ -102,7 +102,6 @@ static dispatch_once_t g_publishInstallOnceToken;
             ASIdentifierManager *manager = [ASIdentifierManager sharedManager];
             advertiserID = [[manager advertisingIdentifier] UUIDString];
         }
-  
         if ((attributionID || advertiserID) && !lastPing) {
             FBRequestHandler publishCompletionBlock = ^(FBRequestConnection *connection,
                                                         id result,
@@ -157,11 +156,10 @@ static dispatch_once_t g_publishInstallOnceToken;
             FBRequest *pingRequest = [[[FBRequest alloc] initWithSession:nil graphPath:pingPath] autorelease];
             [pingRequest startWithCompletionHandler:pingCompletionBlock];
         }
+#endif
     } @catch (NSException *ex3) {
         NSLog(@"Failure before/during install ping: %@", ex3.reason);
     }
 }
-
-#endif
 
 @end
