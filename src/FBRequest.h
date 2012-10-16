@@ -18,6 +18,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "FBRequestConnection.h"
 #import "FBGraphObject.h"
+	 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+#import <UIKit/UIKit.h>
+#endif
 
 /*! The base URL used for graph requests */
 extern NSString* const FBGraphBasePath;

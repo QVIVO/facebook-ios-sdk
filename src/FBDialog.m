@@ -347,12 +347,7 @@ params   = _params;
         [_closeButton addTarget:self action:@selector(cancel)
                forControlEvents:UIControlEventTouchUpInside];
         
-        // To be compatible with OS 2.x
-#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_2_2
-        _closeButton.font = [UIFont boldSystemFontOfSize:12];
-#else
         _closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:12];
-#endif
         
         _closeButton.showsTouchWhenHighlighted = YES;
         _closeButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin

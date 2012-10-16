@@ -80,6 +80,7 @@ int const FBRefreshCacheDelaySeconds = 2;
     return self;
 }
 
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
@@ -89,6 +90,7 @@ int const FBRefreshCacheDelaySeconds = 2;
     
     return self;
 }
+#endif
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

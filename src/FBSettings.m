@@ -19,7 +19,10 @@
 #import "FBSettings.h"
 #import "FBSettings+Internal.h"
 
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #import <AdSupport/AdSupport.h>
+#endif
+
 #import <UIKit/UIKit.h>
 
 NSString *const FBLoggingBehaviorFBRequests = @"fb_requests";
@@ -74,6 +77,8 @@ static dispatch_once_t g_publishInstallOnceToken;
 
 #pragma mark -
 #pragma mark proto-activity publishing code
+
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 + (void)publishInstall:(NSString *)appID {
     @try {
@@ -156,5 +161,7 @@ static dispatch_once_t g_publishInstallOnceToken;
         NSLog(@"Failure before/during install ping: %@", ex3.reason);
     }
 }
+
+#endif
 
 @end

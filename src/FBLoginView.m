@@ -107,6 +107,7 @@ CGSize g_imageSize;
     return self;
 }
 
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -114,6 +115,7 @@ CGSize g_imageSize;
     }
     return self;
 }
+#endif
 
 - (void)dealloc {
     

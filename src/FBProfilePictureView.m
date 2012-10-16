@@ -82,6 +82,7 @@
     return self;
 }
 
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -89,6 +90,7 @@
     }
     return self;
 }
+#endif
 
 #pragma mark -
 
