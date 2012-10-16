@@ -247,7 +247,7 @@
 		E789DB52162D24FD00C16F9F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CC137215266B9000443948 /* QuartzCore.framework */; };
 		E789DB53162D24FD00C16F9F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CBC53715254AC50036AA71 /* libsqlite3.dylib */; };
 		E789DB54162D24FD00C16F9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		E789DB5B162D261700C16F9F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E789DB5A162D261700C16F9F /* Accounts.framework */; };
+		E789DB5B162D261700C16F9F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E789DB5A162D261700C16F9F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7BBCE2E15753C7400B6B8F6 /* FBContentLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBCE2D15753C7400B6B8F6 /* FBContentLinkTests.m */; };
 		E7BBCE3115753C8E00B6B8F6 /* FBContentLink.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BBCE2F15753C8E00B6B8F6 /* FBContentLink.h */; settings = {ATTRIBUTES = (); }; };
 		E7BBCE3315753C8E00B6B8F6 /* FBContentLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBCE3015753C8E00B6B8F6 /* FBContentLink.m */; };
@@ -391,7 +391,7 @@
 		E2B99CF01549CD7F002AEA86 /* FBGraphObjectTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGraphObjectTableDataSource.m; sourceTree = "<group>"; };
 		E2B99CF31549E02A002AEA86 /* FBGraphObjectTableSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBGraphObjectTableSelection.h; sourceTree = "<group>"; };
 		E2B99CF41549E02A002AEA86 /* FBGraphObjectTableSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBGraphObjectTableSelection.m; sourceTree = "<group>"; };
-		E789DB58162D24FD00C16F9F /* libfacebook-ios-sdk copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfacebook-ios-sdk copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E789DB58162D24FD00C16F9F /* libfacebook-mac-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfacebook-mac-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E789DB5A162D261700C16F9F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
 		E7BBCE2C15753C7400B6B8F6 /* FBContentLinkTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBContentLinkTests.h; path = tests/FBContentLinkTests.h; sourceTree = "<group>"; };
 		E7BBCE2D15753C7400B6B8F6 /* FBContentLinkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBContentLinkTests.m; path = tests/FBContentLinkTests.m; sourceTree = "<group>"; };
@@ -450,7 +450,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libfacebook_ios_sdk.a */,
 				B9CBC519152537270036AA71 /* FacebookSDKTests.octest */,
-				E789DB58162D24FD00C16F9F /* libfacebook-ios-sdk copy.a */,
+				E789DB58162D24FD00C16F9F /* libfacebook-mac-sdk.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -815,7 +815,7 @@
 			);
 			name = "facebook-mac-sdk";
 			productName = "facebook-ios-sdk";
-			productReference = E789DB58162D24FD00C16F9F /* libfacebook-ios-sdk copy.a */;
+			productReference = E789DB58162D24FD00C16F9F /* libfacebook-mac-sdk.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1053,6 +1053,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Debug;
 		};
@@ -1070,6 +1071,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Release;
 		};
@@ -1187,6 +1189,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
+				GCC_THREADSAFE_STATICS = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
@@ -1194,11 +1197,12 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_NAME = "facebook-ios-sdk copy";
+				PRODUCT_NAME = "facebook-mac-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Debug;
 		};
@@ -1212,6 +1216,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
+				GCC_THREADSAFE_STATICS = NO;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
@@ -1219,11 +1224,12 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_NAME = "facebook-ios-sdk copy";
+				PRODUCT_NAME = "facebook-mac-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Release;
 		};
