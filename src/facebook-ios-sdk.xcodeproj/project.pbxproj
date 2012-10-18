@@ -1053,7 +1053,6 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Debug;
 		};
@@ -1071,7 +1070,6 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Release;
 		};
@@ -1202,7 +1200,6 @@
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
-				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Debug;
 		};
@@ -1229,7 +1226,6 @@
 				SDKROOT = macosx10.8;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
-				SYMROOT = "$(QVIVO3_OUTPUT)";
 			};
 			name = Release;
 		};
