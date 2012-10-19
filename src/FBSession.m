@@ -16,7 +16,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIDevice.h>
+
+#if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_7) || (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 #import <Accounts/Accounts.h>
+#endif
+
 #import "FBSession.h"
 #import "FBSession+Internal.h"
 #import "FBSession+Protected.h"
@@ -609,6 +613,7 @@ static FBSession *g_activeSession = nil;
     return g_defaultAppID;
 }
 
+#if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_7) || (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 //calls ios6 renewCredentialsForAccount in order to update ios6's worldview of authorization state.
 // if not using ios6 system auth, this is a no-op.
 + (void)renewSystemAuthorization {
@@ -635,6 +640,7 @@ static FBSession *g_activeSession = nil;
         }
     }
 }
+#endif
 
 #pragma mark -
 #pragma mark Private Members
@@ -963,6 +969,7 @@ static FBSession *g_activeSession = nil;
     }
 }
 
+#if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_7) || (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 - (void)authorizeUsingSystemAccountStore:(ACAccountStore*)accountStore
                              accountType:(ACAccountType*)accountType
                              permissions:(NSArray*)permissions
@@ -1110,6 +1117,7 @@ static FBSession *g_activeSession = nil;
                                        }];
 
 }
+#endif
 
 - (BOOL)handleOpenURLPreOpen:(NSDictionary*)parameters
                  accessToken:(NSString*)accessToken
