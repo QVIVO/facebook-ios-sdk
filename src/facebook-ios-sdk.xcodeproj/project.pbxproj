@@ -250,6 +250,7 @@
 		E7BBCE2E15753C7400B6B8F6 /* FBContentLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBCE2D15753C7400B6B8F6 /* FBContentLinkTests.m */; };
 		E7BBCE3115753C8E00B6B8F6 /* FBContentLink.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BBCE2F15753C8E00B6B8F6 /* FBContentLink.h */; settings = {ATTRIBUTES = (); }; };
 		E7BBCE3315753C8E00B6B8F6 /* FBContentLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBCE3015753C8E00B6B8F6 /* FBContentLink.m */; };
+		FA72D0BC1657886000FD5376 /* FBNativeDialogs.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A9288E1611187F008699F1 /* FBNativeDialogs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -755,6 +756,7 @@
 				E789DB23162D24FD00C16F9F /* FBSettings+Internal.h in Headers */,
 				E789DB24162D24FD00C16F9F /* FBViewController+Internal.h in Headers */,
 				E789DB25162D24FD00C16F9F /* FBSDKVersion.h in Headers */,
+				FA72D0BC1657886000FD5376 /* FBNativeDialogs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1048,7 @@
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				PRODUCT_NAME = facebook_ios_sdk;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1063,7 +1065,7 @@
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				PRODUCT_NAME = facebook_ios_sdk;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1081,8 +1083,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OBJROOT = "$(SYMROOT)/build";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SYMROOT = "$(QVIVO_OUTPUT)";
 			};
 			name = Debug;
 		};
@@ -1097,8 +1101,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OBJROOT = "$(SYMROOT)/build";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SYMROOT = "$(QVIVO_OUTPUT)";
 			};
 			name = Release;
 		};
@@ -1177,7 +1183,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../Frameworks/$(CONFIGURATION)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1192,7 +1197,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
 				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1205,7 +1210,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/facebook_ios_sdk.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../Frameworks/$(CONFIGURATION)";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = facebook_ios_sdk_Prefix.pch;
@@ -1218,7 +1222,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
 				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
