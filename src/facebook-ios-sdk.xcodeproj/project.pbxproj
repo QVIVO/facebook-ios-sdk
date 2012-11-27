@@ -1198,7 +1198,7 @@
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 			};
@@ -1223,7 +1223,7 @@
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
 				PUBLIC_HEADERS_FOLDER_PATH = include/FacebookSDK;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 			};
