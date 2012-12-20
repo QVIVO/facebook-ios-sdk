@@ -1193,7 +1193,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-framework",
+					"-weak_framework",
 					UIKit,
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
@@ -1218,7 +1218,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-framework",
+					"-weak_framework",
 					UIKit,
 				);
 				PRODUCT_NAME = "facebook-mac-sdk";
