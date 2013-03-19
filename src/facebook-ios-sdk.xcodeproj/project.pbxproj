@@ -230,14 +230,10 @@
 		E789DB3B162D24FD00C16F9F /* FBGraphObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE5DA2152EA02500C4DE54 /* FBGraphObject.m */; };
 		E789DB3C162D24FD00C16F9F /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0CA08153619D400778DA4 /* Facebook.m */; };
 		E789DB3D162D24FD00C16F9F /* FBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D2DD71547C33000873F7C /* FBUtility.m */; };
-		E789DB3E162D24FD00C16F9F /* FBFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28B75531547D85A002E30C0 /* FBFriendPickerViewController.m */; };
 		E789DB41162D24FD00C16F9F /* FBLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7CB41F1553ACC600C183CF /* FBLogger.m */; };
-		E789DB42162D24FD00C16F9F /* FBPlacePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2223AEA1554573900126FD2 /* FBPlacePickerViewController.m */; };
 		E789DB43162D24FD00C16F9F /* FBGraphObjectPagingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 85954B85155B452E00FABA9A /* FBGraphObjectPagingLoader.m */; };
 		E789DB44162D24FD00C16F9F /* FBTestSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8525A5B9156F2049009F6F3F /* FBTestSession.m */; };
 		E789DB45162D24FD00C16F9F /* FBContentLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BBCE3015753C8E00B6B8F6 /* FBContentLink.m */; };
-		E789DB46162D24FD00C16F9F /* FBFriendPickerCacheDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6531581A15E00A2FA5E /* FBFriendPickerCacheDescriptor.m */; };
-		E789DB47162D24FD00C16F9F /* FBPlacePickerCacheDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6551581A1A600A2FA5E /* FBPlacePickerCacheDescriptor.m */; };
 		E789DB48162D24FD00C16F9F /* FBCacheDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A64C1581A0CF00A2FA5E /* FBCacheDescriptor.m */; };
 		E789DB49162D24FD00C16F9F /* FBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F658E159B3A64005D41AA /* FBLoginView.m */; };
 		E789DB4A162D24FD00C16F9F /* FBSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB7C34B15A6181100C8DCE6 /* FBSettings.m */; };
@@ -996,14 +992,10 @@
 				E789DB3B162D24FD00C16F9F /* FBGraphObject.m in Sources */,
 				E789DB3C162D24FD00C16F9F /* Facebook.m in Sources */,
 				E789DB3D162D24FD00C16F9F /* FBUtility.m in Sources */,
-				E789DB3E162D24FD00C16F9F /* FBFriendPickerViewController.m in Sources */,
 				E789DB41162D24FD00C16F9F /* FBLogger.m in Sources */,
-				E789DB42162D24FD00C16F9F /* FBPlacePickerViewController.m in Sources */,
 				E789DB43162D24FD00C16F9F /* FBGraphObjectPagingLoader.m in Sources */,
 				E789DB44162D24FD00C16F9F /* FBTestSession.m in Sources */,
 				E789DB45162D24FD00C16F9F /* FBContentLink.m in Sources */,
-				E789DB46162D24FD00C16F9F /* FBFriendPickerCacheDescriptor.m in Sources */,
-				E789DB47162D24FD00C16F9F /* FBPlacePickerCacheDescriptor.m in Sources */,
 				E789DB48162D24FD00C16F9F /* FBCacheDescriptor.m in Sources */,
 				E789DB49162D24FD00C16F9F /* FBLoginView.m in Sources */,
 				E789DB4A162D24FD00C16F9F /* FBSettings.m in Sources */,
